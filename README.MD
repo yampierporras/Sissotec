@@ -25,7 +25,10 @@
 ##### HU04 Atención de especialista
 ##### HU05 Conformidad de atención
 ##### HU06 Gestión de usuarios
-##### **HU07 Gestión de especialistas**
+1. Consulta de usuario
+2. Modificar usuario
+3. Cambiar nivel de usuario
+##### HU07 Gestión de especialistas
 1. Registro de especialistas
    - El usuario ingresa los campos del formulario.
    - El administrador busca al `usuario` por **apellidos y nombres** en el ultimo campo.
