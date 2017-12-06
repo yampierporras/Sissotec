@@ -21,7 +21,9 @@
 - HU04 Atención de especialista
 - HU05 Conformidad de atención
 - HU06 Gestión de usuarios
-- HU07 Gestión de especialistas
-- HU08 Gestión de mesa de ayuda
-- HU09 Gestión de administradores
+- *HU07 Gestión de especialistas*
+  * Registro de especialistas
+  * Modificación de especialistas
+- _HU08 Gestión de mesa de ayuda_
+- _HU09 Gestión de administradores_
 - HU10 Gestión de tickets
