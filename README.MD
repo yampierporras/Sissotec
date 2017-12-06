@@ -16,8 +16,8 @@
 ##### Especifiación de Historias de Usuario
 
 - HU01 Autenticación de usuario
-  1. El usuario inicia sesión con su gmail
-  1. El  sistema busca al usuario
+1. El usuario inicia sesión con su gmail
+1. El  sistema busca al usuario
     1. Si el usuario existe, busca en (cliente, especialista, mesa de ayuda o administrador) de acuerdo a su campo **idNivelUsuario**.
     1. Si el usuario no existe, se registra en `usuario` con el **idNivelUsuario=0** y en `cliente`.
 - HU02 Generación de atención
