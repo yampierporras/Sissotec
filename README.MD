@@ -18,7 +18,7 @@
 ##### HU01 Autenticación de usuario
 1. El usuario inicia sesión con su gmail
 2. El  sistema busca al usuario
-   - Si el usuario existe, busca en (cliente, especialista, mesa de ayuda o administrador) de acuerdo a su campo **idNivelUsuario**.
+   - Si el usuario existe, busca en (`cliente`, `especialista`, `mesa de ayuda` o `administrador`) de acuerdo a su campo **idNivelUsuario**.
    - Si el usuario no existe, se registra en `usuario` con el **idNivelUsuario=0** y en `cliente`.
 ##### HU02 Generación de atención
 ##### HU03 Atención en mesa de ayuda
@@ -26,8 +26,17 @@
 ##### HU05 Conformidad de atención
 ##### HU06 Gestión de usuarios
 ##### HU07 Gestión de especialistas
-  * Registro de especialistas
-  * Modificación de especialistas
+1. Registro de especialistas
+   - El usuario ingresa los campos del formulario.
+   - El administrador busca al `usuario` por **apellidos y nombres** en el ultimo campo.
+   - Se busca al `usuario` en en `especialista` y con su **pk**:
+      - Si existe se advierte y se deniega la operación de registro.
+      - Si no existe se realizan los siguientes pasos:
+         - De acuerdo al **idNivelUsuario** del `usuario` se busca en (`cliente`, `mesa de ayuda` o `administrador`) y se da de baja.
+         - Se cambia el **idNivelUsuario** a **1**.
+         - Se registran los datos en `especialista` con el **pk** del `usuario`.
+         
+2. Modificación de especialistas
 ##### _HU08 Gestión de mesa de ayuda_
 ##### _HU09 Gestión de administradores_
 ##### HU10 Gestión de tickets
