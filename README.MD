@@ -27,3 +27,6 @@
 - _HU08 Gestión de mesa de ayuda_
 - _HU09 Gestión de administradores_
 - HU10 Gestión de tickets
+
+[Basic syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+[Emojis](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
