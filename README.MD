@@ -2,7 +2,8 @@
 
 Tareas
 
-[] Martes 5 - Diagramas de colaboración + Diagrama de clases
+- [x] Finish my changes
+[] Martes 5 \- Diagramas de colaboración + Diagrama de clases
 [] Miercoles 6 - Base de datos (E-R, Lógico y Físico)
 [] Jueves 7 - Interfaces de Usuario en Adobe XD
 [] Viernes 8 - Interfaces en HTML + CSS
