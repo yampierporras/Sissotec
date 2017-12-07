@@ -11753,7 +11753,7 @@
 						ShowCompartmentStereotypes 	TRUE
 						IncludeAttribute 	TRUE
 						IncludeOperation 	TRUE
-						location   	(2818, 263)
+						location   	(2818, 254)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -11765,7 +11765,7 @@
 						    default_color 	TRUE)
 						label      	(object ItemLabel
 						    Parent_View 	@534
-						    location   	(2818, 419)
+						    location   	(2818, 410)
 						    anchor_loc 	1
 						    nlines     	1
 						    max_width  	682
@@ -11780,102 +11780,102 @@
 						annotation 	8
 						autoResize 	TRUE)
 					    (object AssociationViewNew "" @535
-						location   	(2225, 496)
+						location   	(2225, 491)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A26C9490193"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @536
 							Parent_View 	@535
-							location   	(599, -246)
+							location   	(599, -251)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A26C94903E4"
 							client     	@535
 							supplier   	@534
 							vertices   	(list Points
-							    (2225, 496)
-							    (2742, 290))
+							    (2225, 491)
+							    (2742, 281))
 							line_style 	0)
 						    (object RoleView "" @537
 							Parent_View 	@535
-							location   	(599, -246)
+							location   	(599, -251)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A26C94A000B"
 							client     	@535
 							supplier   	@500
 							vertices   	(list Points
-							    (2225, 496)
-							    (1709, 703))
+							    (2225, 491)
+							    (1709, 702))
 							line_style 	0)))
 					    (object AssociationViewNew "" @538
-						location   	(2115, 794)
+						location   	(2118, 789)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A26C94F013A"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @539
 							Parent_View 	@538
-							location   	(473, -345)
+							location   	(476, -350)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A26C950017A"
 							client     	@538
 							supplier   	@534
 							vertices   	(list Points
-							    (2115, 794)
-							    (2512, 494))
+							    (2118, 789)
+							    (2517, 485))
 							line_style 	0)
 						    (object RoleView "" @540
 							Parent_View 	@538
-							location   	(473, -345)
+							location   	(476, -350)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A26C950017C"
 							client     	@538
 							supplier   	@507
 							vertices   	(list Points
-							    (2115, 794)
+							    (2118, 789)
 							    (1719, 1094))
 							line_style 	0)))
 					    (object AssociationViewNew "" @541
-						location   	(3677, 2009)
+						location   	(3343, 1993)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A26C9550370"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @542
 							Parent_View 	@541
-							location   	(2038, 448)
+							location   	(1704, 432)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A26C958010F"
 							client     	@541
 							supplier   	@534
 							vertices   	(list Points
-							    (3677, 2009)
-							    (3684, 295)
-							    (2892, 263))
+							    (3343, 1993)
+							    (3343, 254)
+							    (2892, 254))
 							line_style 	0)
 						    (object RoleView "" @543
 							Parent_View 	@541
-							location   	(2038, 448)
+							location   	(1704, 432)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A26C958011F"
 							client     	@541
 							supplier   	@523
 							vertices   	(list Points
-							    (3677, 2009)
-							    (3675, 2567)
+							    (3343, 1993)
+							    (3343, 2567)
 							    (1727, 2567))
 							line_style 	0)))
 					    (object ClassView "Class" "Logical View::REALIZACION::1\\:AUTENTICACION DE USUARIOS::Clientes" @544
 						ShowCompartmentStereotypes 	TRUE
 						IncludeAttribute 	TRUE
 						IncludeOperation 	TRUE
-						location   	(2813, 727)
+						location   	(2794, 723)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -11887,7 +11887,7 @@
 						    default_color 	TRUE)
 						label      	(object ItemLabel
 						    Parent_View 	@544
-						    location   	(2813, 883)
+						    location   	(2794, 879)
 						    anchor_loc 	1
 						    nlines     	2
 						    max_width  	729
@@ -11905,7 +11905,7 @@
 						ShowCompartmentStereotypes 	TRUE
 						IncludeAttribute 	TRUE
 						IncludeOperation 	TRUE
-						location   	(2822, 1232)
+						location   	(2789, 1232)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -11917,7 +11917,7 @@
 						    default_color 	TRUE)
 						label      	(object ItemLabel
 						    Parent_View 	@545
-						    location   	(2822, 1388)
+						    location   	(2789, 1388)
 						    anchor_loc 	1
 						    nlines     	2
 						    max_width  	733
@@ -11935,7 +11935,7 @@
 						ShowCompartmentStereotypes 	TRUE
 						IncludeAttribute 	TRUE
 						IncludeOperation 	TRUE
-						location   	(2818, 1718)
+						location   	(2800, 1714)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -11947,7 +11947,7 @@
 						    default_color 	TRUE)
 						label      	(object ItemLabel
 						    Parent_View 	@546
-						    location   	(2818, 1874)
+						    location   	(2800, 1870)
 						    anchor_loc 	1
 						    nlines     	2
 						    max_width  	736
@@ -12022,223 +12022,223 @@
 							    (1177, 1342))
 							line_style 	0)))
 					    (object AssociationViewNew "" @551
-						location   	(2114, 1286)
+						location   	(2109, 1282)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A281F0501C9"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @552
 							Parent_View 	@551
-							location   	(475, -253)
+							location   	(470, -257)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F0600B3"
 							client     	@551
 							supplier   	@544
 							vertices   	(list Points
-							    (2114, 1286)
-							    (2523, 958))
+							    (2109, 1282)
+							    (2512, 954))
 							line_style 	0)
 						    (object RoleView "" @553
 							Parent_View 	@551
-							location   	(475, -253)
+							location   	(470, -257)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F0600B7"
 							client     	@551
 							supplier   	@547
 							vertices   	(list Points
-							    (2114, 1286)
-							    (1706, 1615))
+							    (2109, 1282)
+							    (1706, 1610))
 							line_style 	0)))
 					    (object AssociationViewNew "" @554
-						location   	(2226, 1451)
+						location   	(2209, 1451)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A281F060308"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @555
 							Parent_View 	@554
-							location   	(587, -88)
+							location   	(570, -88)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F070153"
 							client     	@554
 							supplier   	@545
 							vertices   	(list Points
-							    (2226, 1451)
-							    (2746, 1256))
+							    (2209, 1451)
+							    (2712, 1257))
 							line_style 	0)
 						    (object RoleView "" @556
 							Parent_View 	@554
-							location   	(587, -88)
+							location   	(570, -88)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F07015A"
 							client     	@554
 							supplier   	@547
 							vertices   	(list Points
-							    (2226, 1451)
-							    (1706, 1646))
+							    (2209, 1451)
+							    (1706, 1645))
 							line_style 	0)))
 					    (object AssociationViewNew "" @557
-						location   	(2224, 1696)
+						location   	(2214, 1693)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A281F07033F"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @558
 							Parent_View 	@557
-							location   	(585, 157)
+							location   	(575, 154)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F080253"
 							client     	@557
 							supplier   	@546
 							vertices   	(list Points
-							    (2224, 1696)
-							    (2742, 1713))
+							    (2214, 1693)
+							    (2722, 1709))
 							line_style 	0)
 						    (object RoleView "" @559
 							Parent_View 	@557
-							location   	(585, 157)
+							location   	(575, 154)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F080257"
 							client     	@557
 							supplier   	@547
 							vertices   	(list Points
-							    (2224, 1696)
-							    (1706, 1679))
+							    (2214, 1693)
+							    (1706, 1678))
 							line_style 	0)))
 					    (object AssociationViewNew "" @560
-						location   	(2160, 1045)
+						location   	(2160, 1040)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A281F1301DF"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @561
 							Parent_View 	@560
-							location   	(521, -494)
+							location   	(521, -499)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F140133"
 							client     	@560
 							supplier   	@534
 							vertices   	(list Points
-							    (2160, 1045)
-							    (2625, 494))
+							    (2160, 1040)
+							    (2626, 485))
 							line_style 	0)
 						    (object RoleView "" @562
 							Parent_View 	@560
-							location   	(521, -494)
+							location   	(521, -499)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F140137"
 							client     	@560
 							supplier   	@547
 							vertices   	(list Points
-							    (2160, 1045)
-							    (1695, 1596))
+							    (2160, 1040)
+							    (1695, 1595))
 							line_style 	0)))
 					    (object AssociationViewNew "" @563
-						location   	(2215, 1353)
+						location   	(2214, 1353)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A282C8703AB"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @564
 							Parent_View 	@563
-							location   	(576, -186)
+							location   	(575, -186)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C890187"
 							client     	@563
 							supplier   	@544
 							vertices   	(list Points
-							    (2215, 1353)
-							    (2380, 1263)
-							    (2627, 958))
+							    (2214, 1353)
+							    (2379, 1263)
+							    (2618, 954))
 							line_style 	0)
 						    (object RoleView "" @565
 							Parent_View 	@563
-							location   	(576, -186)
+							location   	(575, -186)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C89018F"
 							client     	@563
 							supplier   	@547
 							vertices   	(list Points
-							    (2215, 1353)
+							    (2214, 1353)
 							    (1706, 1631))
 							line_style 	0)))
 					    (object AssociationViewNew "" @566
-						location   	(2127, 1601)
+						location   	(2123, 1601)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A282C8A02DA"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @567
 							Parent_View 	@566
-							location   	(488, 62)
+							location   	(484, 62)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C8B01F7"
 							client     	@566
 							supplier   	@545
 							vertices   	(list Points
-							    (2127, 1601)
-							    (2385, 1563)
-							    (2516, 1463))
+							    (2123, 1601)
+							    (2383, 1563)
+							    (2505, 1463))
 							line_style 	0)
 						    (object RoleView "" @568
 							Parent_View 	@566
-							location   	(488, 62)
+							location   	(484, 62)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C8B0206"
 							client     	@566
 							supplier   	@547
 							vertices   	(list Points
-							    (2127, 1601)
+							    (2123, 1601)
 							    (1706, 1662))
 							line_style 	0)))
 					    (object AssociationViewNew "" @569
-						location   	(2188, 1824)
+						location   	(2187, 1824)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A282C940098"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @570
 							Parent_View 	@569
-							location   	(549, 285)
+							location   	(548, 285)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C94031A"
 							client     	@569
 							supplier   	@546
 							vertices   	(list Points
-							    (2188, 1824)
-							    (2246, 1839)
-							    (2742, 1732))
+							    (2187, 1824)
+							    (2245, 1839)
+							    (2723, 1729))
 							line_style 	0)
 						    (object RoleView "" @571
 							Parent_View 	@569
-							location   	(549, 285)
+							location   	(548, 285)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C94031C"
 							client     	@569
 							supplier   	@547
 							vertices   	(list Points
-							    (2188, 1824)
+							    (2187, 1824)
 							    (1706, 1695))
 							line_style 	0)))
 					    (object ClassView "Class" "Logical View::REALIZACION::1\\:AUTENTICACION DE USUARIOS::Administradores" @572
 						ShowCompartmentStereotypes 	TRUE
 						IncludeAttribute 	TRUE
 						IncludeOperation 	TRUE
-						location   	(2827, 2303)
+						location   	(2800, 2294)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -12250,7 +12250,7 @@
 						    default_color 	TRUE)
 						label      	(object ItemLabel
 						    Parent_View 	@572
-						    location   	(2827, 2459)
+						    location   	(2800, 2450)
 						    anchor_loc 	1
 						    nlines     	2
 						    max_width  	738
@@ -12265,64 +12265,64 @@
 						annotation 	8
 						autoResize 	TRUE)
 					    (object AssociationViewNew "" @573
-						location   	(2305, 2029)
+						location   	(2290, 2025)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A281F09007F"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @574
 							Parent_View 	@573
-							location   	(666, 490)
+							location   	(651, 486)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F090284"
 							client     	@573
 							supplier   	@572
 							vertices   	(list Points
-							    (2305, 2029)
-							    (2751, 2261))
+							    (2290, 2025)
+							    (2722, 2252))
 							line_style 	0)
 						    (object RoleView "" @575
 							Parent_View 	@573
-							location   	(666, 490)
+							location   	(651, 486)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A281F090288"
 							client     	@573
 							supplier   	@547
 							vertices   	(list Points
-							    (2305, 2029)
-							    (1859, 1797))
+							    (2290, 2025)
+							    (1859, 1798))
 							line_style 	0)))
 					    (object AssociationViewNew "" @576
-						location   	(2230, 2174)
+						location   	(2217, 2171)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"5A282C9503AB"
 						roleview_list 	(list RoleViews
 						    (object RoleView "" @577
 							Parent_View 	@576
-							location   	(591, 635)
+							location   	(578, 632)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C960343"
 							client     	@576
 							supplier   	@572
 							vertices   	(list Points
-							    (2230, 2174)
-							    (2751, 2282))
+							    (2217, 2171)
+							    (2724, 2274))
 							line_style 	0)
 						    (object RoleView "" @578
 							Parent_View 	@576
-							location   	(591, 635)
+							location   	(578, 632)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"5A282C960345"
 							client     	@576
 							supplier   	@547
 							vertices   	(list Points
-							    (2230, 2174)
-							    (2099, 2147)
+							    (2217, 2171)
+							    (2098, 2147)
 							    (1817, 1866))
 							line_style 	0)))))
 				    (object ObjectDiagram "ColD"
