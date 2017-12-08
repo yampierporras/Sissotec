@@ -35,7 +35,9 @@
    - El administrador selecciona el usuario para asignar y:
       - Si su **idNivelUsuario** es -1 entonces se aplica.
       - Si no es -1, entonces se muestra un mensaje de error.
-      
+   - El administrador hace click en *registrar* para crear un nuevo especialista.
+      - El metodo registrar actualiza el **idNivelUsuario** del `usuario` a 2.
+      - El metodo *registrar* guarda los datos en `especialista`.
       - Si no, se busca al `usuario` en `cliente`,`especialista`,`mesaAyuda` o `administrador` de acuerdo a su **idNivelUsuario**:
          - Si existe se advierte y se deniega la operación de registro.
          - Si no existe se realizan los siguientes pasos:
