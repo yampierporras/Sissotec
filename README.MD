@@ -31,13 +31,17 @@
 ##### HU07 Gestión de especialistas
 1. Registro de especialistas
    - El usuario ingresa los campos del formulario.
-   - El administrador busca al `usuario` por **apellidos y nombres** en el ultimo campo.
-   - Se busca al `usuario` en en `especialista` y con su **pk**:
-      - Si existe se advierte y se deniega la operación de registro.
-      - Si no existe se realizan los siguientes pasos:
-         - De acuerdo al **idNivelUsuario** del `usuario` se busca en (`cliente`, `mesa de ayuda` o `administrador`) y se da de baja.
-         - Se cambia el **idNivelUsuario** a **1**.
-         - Se registran los datos en `especialista` con el **pk** del `usuario`.
+   - El administrador busca al `usuario` por **correo** en el ultimo campo.
+   - El administrador selecciona el usuario para asignar y:
+      - Si su **idNivelUsuario** es -1 entonces se aplica.
+      - Si no es -1, entonces se muestra un mensaje de error.
+      
+      - Si no, se busca al `usuario` en `cliente`,`especialista`,`mesaAyuda` o `administrador` de acuerdo a su **idNivelUsuario**:
+         - Si existe se advierte y se deniega la operación de registro.
+         - Si no existe se realizan los siguientes pasos:
+            - De acuerdo al **idNivelUsuario** del `usuario` se busca en (`cliente`) y se da de baja.
+            - Se cambia el **idNivelUsuario** a **1**.
+            - Se registran los datos en `especialista` con el **pk** del `usuario`.
          
 2. Modificación de especialistas
    - El usuario activa la edición de un especialista.
