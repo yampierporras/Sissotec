@@ -7,8 +7,23 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+//Agregando la ruta del API
+var api = require('./routes/api');
+//Agregando mongoose
+var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/sissotec', { useMongoClient: true })
+mongoose.connect('mongodb://localhost:27017/sissotec', { useMongoClient: true })
+.then(()=> { console.log(`Succesfully Connected to the Mongodb Database  at URL : mongodb://127.0.0.1:27017/sissotec`)})
+.catch(()=> { console.log(`Error Connecting to the Mongodb Database at URL : mongodb://127.0.0.1:27017/sissotec`)});
 
 var app = express();
+//CORS policy
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+//Usar la ruta del API para las rutas /api
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
