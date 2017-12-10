@@ -2,9 +2,31 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var nivelUsuarioSchema = new Schema({
-    codNivelUsuario: int,//0:Cliente, 1:MesaAyuda, 2:Especialista, 3:Administrador, -1:SinAsignar
+    codNivelUsuario: Number,
     nomNivelUsuario: String
 });
-const Privilegio = mongoose.model('privilegios', privilegioSchema);
+const NivelUsuario = mongoose.model('NivelUsuario', nivelUsuarioSchema, 'nivelusuario');
+// Mongoose Model, Schema Name, Collection MongoDb Name.
 
-module.exports = Privilegio;
+module.exports = NivelUsuario;
+
+// {
+//     codNivelUsuario: -1,
+//     nomNivelUsuario: 'Sin asignar'
+// }
+// {
+//     codNivelUsuario: 0,
+//     nomNivelUsuario: 'Cliente'
+// }
+// {
+//     codNivelUsuario: 1,
+//     nomNivelUsuario: 'Mesa de Ayuda'
+// }
+// {
+//     codNivelUsuario: 2,
+//     nomNivelUsuario: 'Especialista'
+// }
+// {
+//     codNivelUsuario: 3,
+//     nomNivelUsuario: 'Administrador'
+// }

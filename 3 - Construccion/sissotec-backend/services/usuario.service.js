@@ -3,7 +3,8 @@ var Usuario = require('../models/usuario.model');
 exports.getUsuarios = async function(query) {
     try {
         var usuarios;
-        await Usuario.find(query, function(err, usuariosData){
+        await Usuario.find(query).populate('nivelUsuario').exec(function(err, usuariosData) {
+            if (err) return console.log(err.message);
             usuarios = usuariosData;
         });
         return usuarios;
@@ -17,7 +18,8 @@ exports.createUsuario = async function(usuario) {
         nomUsuario: usuario.nomUsuario,
         emailUsuario: usuario.emailUsuario,
         urlImgUsuario: usuario.urlImgUsuario,
-        estadoUsuario: usuario.estadoUsuario
+        estadoUsuario: usuario.estadoUsuario,
+        nivelUsuario: usuario.nivelUsuario
     });
 
     try {
@@ -25,6 +27,6 @@ exports.createUsuario = async function(usuario) {
 
         return savedUsuario;
     } catch (e) {
-        throw Error("Error while Creating Usuario")
+        throw Error("Error al crear Usuario");
     }
 }

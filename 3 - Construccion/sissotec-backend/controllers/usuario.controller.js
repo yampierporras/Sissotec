@@ -19,7 +19,8 @@ exports.createUsuario = async function(req, res, next) {
         nomUsuario: req.body.nomUsuario,
         emailUsuario: req.body.emailUsuario,
         urlImgUsuario: req.body.urlImgUsuario,
-        estadoUsuario: req.body.estadoUsuario
+        estadoUsuario: req.body.estadoUsuario,
+        nivelUsuario: req.body.nivelUsuario
     };
 
     try {
@@ -27,7 +28,8 @@ exports.createUsuario = async function(req, res, next) {
         return res.status(201).json({
             status: 201,
             data: createdUsuario,
-            message: "Creacion de usuario exitoso"});
+            message: "Creacion de usuario exitoso"
+        });
     } catch (e) {
         return res.status(400).json({status: 400, message: e.message});
     }
