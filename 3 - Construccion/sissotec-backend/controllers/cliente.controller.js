@@ -16,9 +16,10 @@ exports.getClientes = async function(req, res, next) {
 exports.createCliente = async function(req, res, next) {
     var cliente = {
         nomCliente: req.body.nomCliente,
-        apePatCliente: req.body.apePatCliente,
-        apeMatCliente: req.body.apeMatCliente,
-        idUsuario: req.body.idUsuario
+        apeCliente: req.body.apeCliente,
+        // apePatCliente: req.body.apePatCliente,
+        // apeMatCliente: req.body.apeMatCliente,
+        idUsuario: req.body.Usuario.idUsuario
     };
 
     try {

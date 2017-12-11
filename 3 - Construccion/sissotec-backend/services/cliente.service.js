@@ -16,8 +16,9 @@ exports.getClientes = async function(query) {
 exports.createCliente = async function(cliente) {
     var newCliente = new Cliente({
         nomCliente: cliente.nomCliente,
-        apePatCliente: cliente.apePatCliente,
-        apeMatCliente: cliente.apeMatCliente,
+        apeCliente: cliente.apeCliente,
+        // apePatCliente: cliente.apePatCliente,
+        // apeMatCliente: cliente.apeMatCliente,
         idUsuario: cliente.idUsuario
     });
 

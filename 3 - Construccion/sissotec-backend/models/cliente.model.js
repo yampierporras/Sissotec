@@ -3,8 +3,9 @@ var Schema = mongoose.Schema;
 
 var clienteSchema = new Schema({
     nomCliente: String,
-    apePatCliente: String,
-    apeMatCliente: String,
+    apeCliente: String,
+    // apePatCliente: String,
+    // apeMatCliente: String,
     idUsuario: { type: Schema.Types.ObjectId, ref: 'Usuario'}
 });
 
