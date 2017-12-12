@@ -1,3 +1,14 @@
-<p>
-  administrador works!
-</p>
+<header>
+    <h1>GUI SISSOTEC {{ title }}</h1>
+    <p>{{ adminitradorAutenticado.nomAdministrador }}</p>
+    <img [src]="adminitradorAutenticado.usuario.urlImgUsuario" alt="">
+</header>
+<div>
+    <ul>
+        <li><a [routerLink]="['clientes']">Clientes</a></li>
+        <li><a [routerLink]="['administradores']">Administradores</a></li>
+    </ul>
+</div>
+<div class="cuerpo">
+    <router-outlet></router-outlet>
+</div>

@@ -10,10 +10,31 @@ import Cliente from '../models/cliente.model';
 export class ClienteService {
     apiUrl = 'http://localhost:3000';
     clienteUrl = `${this.apiUrl}/api/clientes`;
+    clienteConsultado: Cliente;
 
     constructor (private http:HttpClient) {}
 
+    getClientes():Observable<Cliente[]> {
+        return this.http.get(this.clienteUrl)
+        .map(res => {
+            return res['data'] as Cliente[];
+        });
+    }
+
     createCliente(cliente: Cliente): Observable<any> {
         return this.http.post(`${this.clienteUrl}`, cliente);
+    }
+
+    setClienteConsultado(cliente: Cliente) {
+        this.clienteConsultado = cliente;
+    }
+
+    getClienteConsultado(): Cliente {
+        if (this.clienteConsultado != null) {
+            let cliente: Cliente = this.clienteConsultado;
+            this.clienteConsultado = null;
+            return cliente;
+        }
+        return null;
     }
 }

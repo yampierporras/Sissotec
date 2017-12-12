@@ -4,9 +4,8 @@ var Schema = mongoose.Schema;
 var clienteSchema = new Schema({
     nomCliente: String,
     apeCliente: String,
-    // apePatCliente: String,
-    // apeMatCliente: String,
-    idUsuario: { type: Schema.Types.ObjectId, ref: 'Usuario'}
+    estadoCliente: Boolean,
+    usuario: { type: Schema.Types.ObjectId, ref: 'Usuario'}
 });
 
 const Cliente = mongoose.model('Cliente', clienteSchema, 'cliente');

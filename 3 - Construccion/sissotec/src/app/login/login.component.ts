@@ -49,9 +49,18 @@ export class LoginComponent implements OnInit {
             usuarioNuevo.nomUsuario= perfil.getName();
             usuarioNuevo.emailUsuario= perfil.getEmail();
             usuarioNuevo.urlImgUsuario= perfil.getImageUrl();
-            usuarioNuevo.estadoUsuario= true;
-            this.registrarUsuario(usuarioNuevo);
-            console.log('Usuario nuevo, registrando como cliente...');
+            usuarioNuevo.estadoUsuario = true;
+            let clienteNuevo: Cliente = new Cliente();
+            clienteNuevo.nomCliente = perfil.getGivenName();
+            clienteNuevo.apeCliente = perfil.getFamilyName();
+            clienteNuevo.estadoCliente = true;
+            this.registrarUsuarioComoCliente(usuarioNuevo, clienteNuevo, (usuarioRegistrado: Usuario) => {
+                localStorage.setItem('usuarioAutenticado', JSON.stringify(usuarioRegistrado));
+                // console.log('usuarioRegistrado');
+                // console.log(usuarioRegistrado);
+                this.router.navigate(['/sissotec/cliente']);
+                // console.log('debi haberme largado xD');
+            });
         } else {
             if (usuario.estadoUsuario != true) {
                 //Denegar acceso
@@ -61,6 +70,7 @@ export class LoginComponent implements OnInit {
                 switch(usuario.nivelUsuario.codNivelUsuario) {
                     case -1: {
                         //El usuario no tiene asignado un nivel
+                        this.router.navigate(['/login']);
                         break;
                     }
                     case 0: {
@@ -70,14 +80,17 @@ export class LoginComponent implements OnInit {
                     }
                     case 1: {
                         //El usuario es un mesa de ayuda
+                        this.router.navigate(['/sissotec/mesaAyuda']);
                         break;
                     }
                     case 2: {
                         //El usuario es un especialista
+                        this.router.navigate(['/sissotec/especialista']);
                         break;
                     }
                     case 3: {
                         //El usuario es un administrador
+                        this.router.navigate(['/sissotec/administrador']);
                         break;
                     }
                 }
@@ -102,10 +115,12 @@ export class LoginComponent implements OnInit {
         });
   }
 
-  registrarUsuario(usuario: Usuario) {
+  registrarUsuarioComoCliente(usuario: Usuario, cliente: Cliente, ingresar:(usuario:Usuario) => void ): void {
       this.usuarioService.createUsuario(usuario)
         .subscribe((res) => {
-
+            cliente.usuario = res.data;
+            this.registrarCliente(cliente);
+            ingresar(res.data);
         });
   }
 

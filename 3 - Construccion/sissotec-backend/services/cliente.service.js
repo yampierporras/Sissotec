@@ -3,7 +3,10 @@ const Cliente = require('../models/cliente.model');
 exports.getClientes = async function(query) {
     try {
         var clientes;
-        await Cliente.find(query).populate('idUsuario').exec(function (err, clientesData) {
+        await Cliente.find(query).populate({
+            path: 'usuario',
+            populate: { path: 'nivelUsuario' }
+        }).exec(function (err, clientesData) {
             if (err) return console.log(err.message);
             clientes = clientesData;
         });
@@ -17,9 +20,8 @@ exports.createCliente = async function(cliente) {
     var newCliente = new Cliente({
         nomCliente: cliente.nomCliente,
         apeCliente: cliente.apeCliente,
-        // apePatCliente: cliente.apePatCliente,
-        // apeMatCliente: cliente.apeMatCliente,
-        idUsuario: cliente.idUsuario
+        estadoCliente: cliente.estadoCliente,
+        usuario: cliente.usuario
     });
 
     try {

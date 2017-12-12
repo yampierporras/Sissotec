@@ -17,18 +17,22 @@ exports.getUsuarios = async function(query) {
 exports.createUsuario = async function(usuario) {
     var newUsuario;
 
-    await NivelUsuario.findOne({codNivelUsuario: 0}).exec(function (err, nivel) {
+    await NivelUsuario.findOne({codNivelUsuario: 0}).exec(function (err, nivelCliente) {
         if (err) return console.log(err.message);
         newUsuario = new Usuario({
             nomUsuario: usuario.nomUsuario,
             emailUsuario: usuario.emailUsuario,
             urlImgUsuario: usuario.urlImgUsuario,
             estadoUsuario: usuario.estadoUsuario,
-            nivelUsuario: nivel._id
+            nivelUsuario: nivelCliente._id
         });
     });
     try {
         var savedUsuario = await newUsuario.save();
+        await Usuario.findOne(savedUsuario).populate('nivelUsuario').exec(function(err, data) {
+            savedUsuario = data;
+        });
+        console.log(savedUsuario);
         return savedUsuario;
     } catch (e) {
         throw Error("Error al crear Usuario");
