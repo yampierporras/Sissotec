@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //Additionals
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -21,6 +22,8 @@ import { AppRoutes } from './app.routes';
 import { GuisaClientesComponent } from './sissotec/administrador/guisa-clientes/guisa-clientes.component';
 import { GuisaAdministradoresComponent } from './sissotec/administrador/guisa-administradores/guisa-administradores.component';
 import { GuisaClientesEdicionComponent } from './sissotec/administrador/guisa-clientes/guisa-clientes-edicion/guisa-clientes-edicion.component';
+import { GuisaClientesListadoComponent } from './sissotec/administrador/guisa-clientes/guisa-clientes-listado/guisa-clientes-listado.component';
+import { GuisaClientesRegistroComponent } from './sissotec/administrador/guisa-clientes/guisa-clientes-registro/guisa-clientes-registro.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +36,13 @@ import { GuisaClientesEdicionComponent } from './sissotec/administrador/guisa-cl
     AdministradorComponent,
     GuisaClientesComponent,
     GuisaAdministradoresComponent,
-    GuisaClientesEdicionComponent
+    GuisaClientesEdicionComponent,
+    GuisaClientesListadoComponent,
+    GuisaClientesRegistroComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(AppRoutes)
   ],

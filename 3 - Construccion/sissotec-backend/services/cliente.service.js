@@ -31,3 +31,31 @@ exports.createCliente = async function(cliente) {
         throw Error("Error al crear Cliente");
     }
 }
+
+exports.updateCliente = async function(cliente) {
+    var id = cliente._id;
+
+    try {
+        var oldCliente = await Cliente.findById(id);
+    } catch (e) {
+        // throw Error("Error al buscar Cliente");
+        console.log('1'+e.message);
+    }
+
+    if (!oldCliente) {
+        return false;
+    }
+
+    oldCliente.nomCliente = cliente.nomCliente;
+    oldCliente.apeCliente = cliente.apeCliente;
+    oldCliente.estadoCliente = cliente.estadoCliente;
+    oldCliente.usuario = cliente.usuario;
+
+    try {
+        var savedCliente = await oldCliente.save();
+        return savedCliente;
+    } catch (e) {
+        // throw Error("Error al actualizar Cliente");
+        console.log('2'+e.message);
+    }
+}

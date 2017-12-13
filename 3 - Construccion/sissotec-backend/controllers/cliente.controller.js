@@ -32,3 +32,28 @@ exports.createCliente = async function(req, res, next) {
         return res.status(400).json({status: 400, message: e.message});
     }
 }
+
+exports.updateCliente = async function(req, res, next) {
+    if (!req.body._id) {
+        return res.status(400).json({status: 400., message: "Id tiene que estar presente"});
+    }
+
+    var cliente = {
+        _id: req.body._id,
+        nomCliente: req.body.nomCliente,
+        apeCliente: req.body.apeCliente,
+        estadoCliente: req.body.estadoCliente,
+        usuario: req.body.usuario._id
+    }
+
+    try {
+        var updatedCliente = await ClienteService.updateCliente(cliente);
+        return res.status(200).json({
+            status: 200,
+            data: updatedCliente,
+            message: "Actualizacion de cliente exitoso"
+        });
+    } catch (e) {
+        return res.status(400).json({status: 400., message: e.message});
+    }
+}

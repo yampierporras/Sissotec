@@ -15,14 +15,20 @@ export class GuisaClientesEdicionComponent implements OnInit {
     clienteConsultado: Cliente;
 
     constructor(private clienteService: ClienteService, private router: Router, private location: Location) {
-        if ((this.clienteConsultado = this.clienteService.getClienteConsultado()) == null) {
-            // this.router.navigate(['/sissotec/administrador/clientes']);
-            this.location.back();
-        }
-
     }
 
     ngOnInit() {
+        if ((this.clienteConsultado = this.clienteService.getClienteConsultado()) == null) {
+            this.clienteConsultado = new Cliente();
+            this.router.navigate(['/sissotec/administrador/clientes']);
+            // this.location.back();
+        }
+    }
+
+    modificarCliente(cliente: Cliente) {
+        console.log(cliente);
+        this.clienteService.updateCliente(cliente)
+            .subscribe(res => {});
     }
 
 }

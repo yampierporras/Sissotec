@@ -7,7 +7,7 @@ export class LoginService {
     constructor(private router:Router) { }
 
     estaAutenticado(uriDestino: string): boolean {
-        console.log(uriDestino);
+        // console.log(uriDestino);
         let usuarioString = localStorage.getItem('usuarioAutenticado');
         let usuarioJson = JSON.parse(usuarioString);
         // console.log(usuarioJson);

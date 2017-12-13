@@ -25,6 +25,10 @@ export class ClienteService {
         return this.http.post(`${this.clienteUrl}`, cliente);
     }
 
+    updateCliente(cliente: Cliente): Observable<any> {
+        return this.http.put(`${this.clienteUrl}`, cliente);
+    }
+
     setClienteConsultado(cliente: Cliente) {
         this.clienteConsultado = cliente;
     }

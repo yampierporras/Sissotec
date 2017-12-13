@@ -1,3 +1,12 @@
-<p>
-  guisa-clientes-edicion works!
-</p>
+<h1>Edicion de Clientes</h1>
+<p>{{ clienteConsultado.estadoCliente ? 'Activo' : 'Inactivo' }}</p>
+<button type="button" name="button">{{ clienteConsultado.estadoCliente ? 'Desactivar' : 'Activar' }}</button>
+<br>
+<label for="">Nombres</label>
+<input type="text" name="" value="" [(ngModel)]="clienteConsultado.nomCliente">
+<br>
+<label for="">Apellidos</label>
+<input type="text" name="" value="" [(ngModel)]="clienteConsultado.apeCliente">
+<p>Usuario: {{ clienteConsultado.usuario.emailUsuario }}</p>
+<button type="button" name="button" (click)="modificarCliente(clienteConsultado)">Actualizar</button>
+<button type="button" name="button" [routerLink]="['/sissotec/administrador/clientes']">Cancelar</button>

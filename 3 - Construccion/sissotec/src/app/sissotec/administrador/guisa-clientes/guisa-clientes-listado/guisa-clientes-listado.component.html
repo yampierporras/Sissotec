@@ -1,0 +1,15 @@
+<h1>Clientes</h1>
+<table>
+    <tr>
+        <th>Cliente</th>
+        <th>Usuario</th>
+        <th>Estado</th>
+        <th>Editar</th>
+    </tr>
+    <tr *ngFor="let cliente of clientesList">
+        <td>{{ cliente.nomCliente }} {{ cliente.apeCliente }}</td>
+        <td>{{ cliente.usuario.emailUsuario }}</td>
+        <td>{{ cliente.estadoCliente ? 'Activo' : 'Inactivo' }}</td>
+        <td><span (click)="irVistaEdicionCliente(cliente)">ir</span></td>
+    </tr>
+</table>
