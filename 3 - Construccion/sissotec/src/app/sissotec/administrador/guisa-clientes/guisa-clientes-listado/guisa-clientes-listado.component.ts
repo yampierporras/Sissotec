@@ -13,10 +13,12 @@ export class GuisaClientesListadoComponent implements OnInit {
 
     clientesList: Cliente[];
 
-    constructor(private clienteService: ClienteService, private router: Router) { }
+    constructor(private clienteService: ClienteService, private router: Router) {
+        this.listarClientes();
+
+    }
 
     ngOnInit() {
-        this.listarClientes();
     }
 
     listarClientes() {
