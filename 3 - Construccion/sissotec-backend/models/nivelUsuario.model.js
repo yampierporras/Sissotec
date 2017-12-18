@@ -3,7 +3,8 @@ var Schema = mongoose.Schema;
 
 var nivelUsuarioSchema = new Schema({
     codNivelUsuario: Number,
-    nomNivelUsuario: String
+    nomNivelUsuario: String,
+    privilegios: [{ type: Schema.Types.ObjectId, ref: 'Privilegio' }]
 });
 const NivelUsuario = mongoose.model('NivelUsuario', nivelUsuarioSchema, 'nivelusuario');
 // Mongoose Model, Schema Name, Collection MongoDb Name.
