@@ -21,6 +21,13 @@ export class ClienteService {
         });
     }
 
+    getCliente(idUsuario: string):Observable<Cliente> {
+        return this.http.get(this.clienteUrl + `/${idUsuario}`)
+        .map(res => {
+            return res['data'] as Cliente;
+        });
+    }
+
     createCliente(cliente: Cliente): Observable<any> {
         return this.http.post(`${this.clienteUrl}`, cliente);
     }

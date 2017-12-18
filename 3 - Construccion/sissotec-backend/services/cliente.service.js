@@ -32,6 +32,22 @@ exports.createCliente = async function(cliente) {
     }
 }
 
+exports.readCliente = async function(query) {
+    try {
+        var cliente;
+        await Cliente.findOne(query).populate({
+            path: 'usuario',
+            populate: { path: 'nivelUsuario' }
+        }).exec(function(err, clienteData) {
+            if (err) return console.log(err.message);
+            cliente = clienteData;
+        });
+        return cliente;
+    } catch (e) {
+        throw Error('Error al consultar cliente');
+    }
+}
+
 exports.updateCliente = async function(cliente) {
     var id = cliente._id;
 

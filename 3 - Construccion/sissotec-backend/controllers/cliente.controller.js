@@ -32,7 +32,18 @@ exports.createCliente = async function(req, res, next) {
         return res.status(400).json({status: 400, message: e.message});
     }
 }
-
+exports.readCliente = async function(req, res, next) {
+    try {
+        var cliente = await ClienteService.readCliente({usuario:req.params.idUsuario});
+        return res.status(202).json({
+            status: 202,
+            data: cliente,
+            message: 'Consulta de cliente exitoso'
+        });
+    } catch (e) {
+        return res.status(400).json({status: 400, message: e.message});
+    }
+}
 exports.updateCliente = async function(req, res, next) {
     if (!req.body._id) {
         return res.status(400).json({status: 400., message: "Id tiene que estar presente"});

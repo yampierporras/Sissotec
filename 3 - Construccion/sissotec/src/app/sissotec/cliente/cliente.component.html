@@ -1,3 +1,14 @@
-<p>
-  cliente works!
-</p>
+<header>
+    <h1>GUI SISSOTEC {{ title }}</h1>
+    <p>{{ clienteAutenticado.nomCliente }}</p>
+    <img [src]="clienteAutenticado.usuario.urlImgUsuario" alt="">
+</header>
+<div>
+    <ul>
+        <li><a [routerLink]="['inicio']">Inicio</a></li>
+        <li><a [routerLink]="['tickets']">Tickets</a></li>
+    </ul>
+</div>
+<div class="cuerpo">
+    <router-outlet></router-outlet>
+</div>

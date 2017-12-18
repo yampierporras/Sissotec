@@ -3,7 +3,13 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { MesaAyudaComponent } from './mesa-ayuda/mesa-ayuda.component';
 import { EspecialistaComponent } from './especialista/especialista.component';
 import { AdministradorComponent } from './administrador/administrador.component';
+//GUISC
+import { GuiscInicioComponent } from './cliente/guisc-inicio/guisc-inicio.component';
+import { GuiscInicioInicioComponent } from './cliente/guisc-inicio/guisc-inicio-inicio/guisc-inicio-inicio.component';
+import { GuiscInicioTicketComponent } from './cliente/guisc-inicio/guisc-inicio-ticket/guisc-inicio-ticket.component';
 
+import { GuiscTicketsComponent } from './cliente/guisc-tickets/guisc-tickets.component';
+import { GuiscTicketsInicioComponent } from './cliente/guisc-tickets/guisc-tickets-inicio/guisc-tickets-inicio.component';
 //GUISA
 import { GuisaClientesComponent } from './administrador/guisa-clientes/guisa-clientes.component';
 import { GuisaClientesListadoComponent } from './administrador/guisa-clientes/guisa-clientes-listado/guisa-clientes-listado.component';
@@ -23,8 +29,19 @@ const GuisaRoutes: Routes = [
     { path: 'administradores', component:  GuisaAdministradoresComponent}
 ]
 
+const GuiscRoutes: Routes = [
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+  { path: 'inicio', component: GuiscInicioComponent, children: [
+      { path: '', component: GuiscInicioInicioComponent },
+      { path: 'ticket', component: GuiscInicioTicketComponent }
+  ]},
+  { path: 'tickets', component: GuiscTicketsComponent, children: [
+      { path: '', component: GuiscTicketsInicioComponent }
+  ]}
+]
+
 export const SissotecRoutes: Routes = [
-    { path: 'cliente', component: ClienteComponent },
+    { path: 'cliente', component: ClienteComponent, children: GuiscRoutes },
     { path: 'mesaAyuda', component: MesaAyudaComponent },
     { path: 'especialista', component: EspecialistaComponent },
     { path: 'administrador', component: AdministradorComponent, children: GuisaRoutes }

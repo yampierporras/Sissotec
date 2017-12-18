@@ -24,6 +24,11 @@ import { GuisaAdministradoresComponent } from './sissotec/administrador/guisa-ad
 import { GuisaClientesEdicionComponent } from './sissotec/administrador/guisa-clientes/guisa-clientes-edicion/guisa-clientes-edicion.component';
 import { GuisaClientesListadoComponent } from './sissotec/administrador/guisa-clientes/guisa-clientes-listado/guisa-clientes-listado.component';
 import { GuisaClientesRegistroComponent } from './sissotec/administrador/guisa-clientes/guisa-clientes-registro/guisa-clientes-registro.component';
+import { GuiscInicioComponent } from './sissotec/cliente/guisc-inicio/guisc-inicio.component';
+import { GuiscInicioInicioComponent } from './sissotec/cliente/guisc-inicio/guisc-inicio-inicio/guisc-inicio-inicio.component';
+import { GuiscInicioTicketComponent } from './sissotec/cliente/guisc-inicio/guisc-inicio-ticket/guisc-inicio-ticket.component';
+import { GuiscTicketsComponent } from './sissotec/cliente/guisc-tickets/guisc-tickets.component';
+import { GuiscTicketsInicioComponent } from './sissotec/cliente/guisc-tickets/guisc-tickets-inicio/guisc-tickets-inicio.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { GuisaClientesRegistroComponent } from './sissotec/administrador/guisa-c
     GuisaAdministradoresComponent,
     GuisaClientesEdicionComponent,
     GuisaClientesListadoComponent,
-    GuisaClientesRegistroComponent
+    GuisaClientesRegistroComponent,
+    GuiscInicioComponent,
+    GuiscInicioInicioComponent,
+    GuiscInicioTicketComponent,
+    GuiscTicketsComponent,
+    GuiscTicketsInicioComponent
   ],
   imports: [
     BrowserModule,
