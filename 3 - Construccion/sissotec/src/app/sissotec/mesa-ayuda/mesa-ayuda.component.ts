@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { MesaAyudaService } from '../../services/mesaAyuda.service';
+
+import MesaAyuda from '../../models/mesaAyuda.model';
 
 @Component({
   selector: 'app-mesa-ayuda',
@@ -7,9 +12,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MesaAyudaComponent implements OnInit {
 
-  constructor() { }
+    title = 'Mesa de Ayuda';
+    mesaAyudaAutenticado: MesaAyuda = new MesaAyuda();
 
-  ngOnInit() {
-  }
+    constructor(private mesaAyudaService:MesaAyudaService) {
+        let usuarioString = localStorage.getItem('usuarioAutenticado');
+        let usuarioJson = JSON.parse(usuarioString);
+        this.consultarMesaAyuda(usuarioJson._id);
+    }
+
+    ngOnInit() {
+    }
+
+    consultarMesaAyuda(idUsuario: string) {
+        this.mesaAyudaService.getMesaAyuda(idUsuario)
+            .subscribe(mesaAyuda => {
+                this.mesaAyudaAutenticado = mesaAyuda;
+            });
+    }
 
 }

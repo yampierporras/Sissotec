@@ -69,6 +69,12 @@ exports.updateCliente = async function(cliente) {
 
     try {
         var savedCliente = await oldCliente.save();
+        await Cliente.findOne(savedCliente).populate({
+            path: 'usuario',
+            populate: { path: 'nivelUsuario' }
+        }).exec(function(err, data) {
+            savedCliente = data;
+        });
         return savedCliente;
     } catch (e) {
         // throw Error("Error al actualizar Cliente");

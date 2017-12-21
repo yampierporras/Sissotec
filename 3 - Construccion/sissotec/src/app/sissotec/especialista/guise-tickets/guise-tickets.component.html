@@ -1,0 +1,20 @@
+<h1>Tickets</h1>
+<ul>
+    <li *ngFor="let atencion of atencionesList" style="background-color: steelblue">
+        <ul>
+            <li>{{ atencion.ticket.categoria.nomCategoria }}</li>
+            <li>{{ atencion.ticket.categoria.prioridadCategoria }}</li>
+            <li>{{ atencion.ticket.categoria.area.nomArea }}</li>
+            <li>{{ atencion.horaGenerada }}</li>
+            <li>{{ atencion.atendido }}</li>
+        </ul>
+        <div style="background-color: gray">
+            <h2>Descripción</h2>
+            <textarea>{{ atencion.ticket.detalleTicket }}</textarea>
+            <h2>Cliente</h2>
+            <p>{{atencion.ticket.cliente.nomCliente}}</p>
+            <button (click)="atenderTicketEspecialista(atencion)">Atender</button>
+            <button (click)="darDeBajaTicket(atencion)">Dar de baja</button>
+        </div>
+    </li>
+</ul>

@@ -1,3 +1,14 @@
-<p>
-  especialista works!
-</p>
+<header>
+    <h1>GUI SISSOTEC {{ title }}</h1>
+    <p>{{ especialistaAutenticado.nomEspecialista }}</p>
+    <img [src]="especialistaAutenticado.usuario.urlImgUsuario" alt="">
+</header>
+<div>
+    <ul>
+        <li><a [routerLink]="['inicio']">Inicio</a></li>
+        <li><a [routerLink]="['tickets']">Tickets</a></li>
+    </ul>
+</div>
+<div class="cuerpo">
+    <router-outlet></router-outlet>
+</div>

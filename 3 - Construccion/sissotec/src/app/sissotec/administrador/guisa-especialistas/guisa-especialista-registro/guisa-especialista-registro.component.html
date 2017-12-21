@@ -1,0 +1,12 @@
+<h1>Registro de Especialistas</h1>
+<form>
+    <label for="">Nombres</label>
+    <input type="text" placeholder="Nombres" [(ngModel)]="especialistaNuevo.nomEspecialista" name="nombres">
+    <label for="">Apellidos</label>
+    <input type="text" placeholder="Apellidos" [(ngModel)]="especialistaNuevo.apeEspecialista" name="apellidos">
+
+    <label for="">Usuario</label> <p>{{ usuario.emailUsuario }}</p>
+    <input type="text" placeholder="Buscar usuario por el correo electronico" [(ngModel)]="filtrador" (ngModelChange)="filtrarUsuarios($event)" name="usuarios">
+    <li *ngFor="let usuario of usuariosFiltrados">{{usuario.emailUsuario}} <span (click)="asignarUsuario(usuario)">Elegir</span></li>
+    <button (click)="registrarEspecialista(especialistaNuevo)">Registrar</button>
+</form>

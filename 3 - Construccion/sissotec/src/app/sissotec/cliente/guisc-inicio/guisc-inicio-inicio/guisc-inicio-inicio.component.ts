@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AreaService } from '../../../../services/area.service';
+
+import Area from '../../../../models/area.model';
 
 @Component({
   selector: 'app-guisc-inicio-inicio',
@@ -7,9 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuiscInicioInicioComponent implements OnInit {
 
-  constructor() { }
+    areasList: Area[];
 
-  ngOnInit() {
-  }
+    constructor(private areaService:AreaService, private router:Router) {
+        this.listarAreas();
+    }
+
+    ngOnInit() {
+    }
+
+    listarAreas() {
+        this.areaService.getAreas()
+            .subscribe(res => {
+                this.areasList = res;
+            })
+    }
+
+    irVistaGenerarTicket(area:Area) {
+        this.areaService.setAreaConsultada(area);
+        this.router.navigate(['/sissotec/cliente/inicio/ticket']);
+    }
 
 }

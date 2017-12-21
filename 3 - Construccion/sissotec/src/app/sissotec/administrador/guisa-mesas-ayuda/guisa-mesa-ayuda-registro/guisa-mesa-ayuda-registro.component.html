@@ -1,0 +1,12 @@
+<h1>Registro de Trabajadores de Mesa de Ayuda</h1>
+<form>
+    <label for="">Nombres</label>
+    <input type="text" placeholder="Nombres" [(ngModel)]="mesaAyudaNuevo.nomMesaAyuda" name="nombres">
+    <label for="">Apellidos</label>
+    <input type="text" placeholder="Apellidos" [(ngModel)]="mesaAyudaNuevo.apeMesaAyuda" name="apellidos">
+
+    <label for="">Usuario</label> <p>{{ usuario.emailUsuario }}</p>
+    <input type="text" placeholder="Buscar usuario por el correo electronico" [(ngModel)]="filtrador" (ngModelChange)="filtrarUsuarios($event)" name="usuarios">
+    <li *ngFor="let usuario of usuariosFiltrados">{{usuario.emailUsuario}} <span (click)="asignarUsuario(usuario)">Elegir</span></li>
+    <button (click)="registrarMesaAyuda(mesaAyudaNuevo)">Registrar</button>
+</form>

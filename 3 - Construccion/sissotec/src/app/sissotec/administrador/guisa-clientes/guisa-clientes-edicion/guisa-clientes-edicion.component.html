@@ -1,6 +1,6 @@
 <h1>Edicion de Clientes</h1>
 <p>{{ clienteConsultado.estadoCliente ? 'Activo' : 'Inactivo' }}</p>
-<button type="button" name="button">{{ clienteConsultado.estadoCliente ? 'Desactivar' : 'Activar' }}</button>
+<button type="button" name="button" (click)="modificarEstadoCliente(clienteConsultado)">{{ clienteConsultado.estadoCliente ? 'Desactivar' : 'Activar' }}</button>
 <br>
 <label for="">Nombres</label>
 <input type="text" name="" value="" [(ngModel)]="clienteConsultado.nomCliente">

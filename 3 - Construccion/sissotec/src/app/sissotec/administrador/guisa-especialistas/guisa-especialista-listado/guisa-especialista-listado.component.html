@@ -1,0 +1,17 @@
+<button type="button" name="button" (click)="irVistaRegistroEspecialista()">Agregar especialista</button>
+
+<h1>Especialistas</h1>
+<table>
+    <tr>
+        <th>Especialista</th>
+        <th>Usuario</th>
+        <th>Estado</th>
+        <th>Editar</th>
+    </tr>
+    <tr *ngFor="let especialista of especialistasList">
+        <td>{{ especialista.nomEspecialista }} {{ especialista.apeEspecialista }}</td>
+        <td>{{ especialista.usuario.emailUsuario }}</td>
+        <td>{{ especialista.estadoEspecialista ? 'Activo' : 'Inactivo' }}</td>
+        <td><span (click)="irVistaEdicionEspecialista(especialista)">ir</span></td>
+    </tr>
+</table>

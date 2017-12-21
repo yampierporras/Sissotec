@@ -1,0 +1,18 @@
+<h1>Tickets</h1>
+<ul>
+    <li *ngFor="let ticket of ticketsList" style="background-color: steelblue">
+        <ul>
+            <li>{{ ticket.categoria.nomCategoria }}</li>
+            <li>{{ ticket.categoria.prioridadCategoria }}</li>
+            <li>{{ ticket.categoria.area.nomArea }}</li>
+        </ul>
+        <div style="background-color: gray">
+            <h2>Descripción</h2>
+            <textarea>{{ ticket.detalleTicket }}</textarea>
+            <h2>Cliente</h2>
+            <p>{{ticket.cliente.nomCliente}}</p>
+            <button (click)="atenderTicket(ticket)">Atender</button>
+            <button (click)="derivarTicket(ticket)">Derivar</button>
+        </div>
+    </li>
+</ul>

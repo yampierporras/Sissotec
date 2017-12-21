@@ -20,6 +20,13 @@ export class UsuarioService {
         });
     }
 
+    getUsuarioFiltrados(textFilter: string):Observable<Usuario[]> {
+        return this.http.get(this.usuarioUrl + `/filtro/${textFilter}`)
+        .map(res => {
+            return res['data'] as Usuario[];
+        });
+    }
+
     getUsuario(email: string):Observable<Usuario> {
         return this.http.get(this.usuarioUrl + `/${email}`)
         .map(res => {
@@ -29,5 +36,12 @@ export class UsuarioService {
 
     createUsuario(usuario: Usuario): Observable<any> {
         return this.http.post(`${this.usuarioUrl}`, usuario);
+    }
+
+    updateUsuario(usuario: Usuario): Observable<Usuario> {
+        return this.http.put(`${this.usuarioUrl}`, usuario)
+        .map(res => {
+            return res['data'] as Usuario;
+        });
     }
 }

@@ -1,3 +1,1 @@
-<p>
-  guisc-tickets-inicio works!
-</p>
+<li *ngFor="let atencion of atencionesList ; index as i">{{ i + 1}} {{ atencion.ticket.detalleTicket }} {{ atencion.ticket.categoria.nomCategoria }}  {{ atencion.ticket.cliente.nomCliente + ' ' + atencion.ticket.cliente.apeCliente }} <span (click)="darConformidad()" >Dar conformidad</span></li>

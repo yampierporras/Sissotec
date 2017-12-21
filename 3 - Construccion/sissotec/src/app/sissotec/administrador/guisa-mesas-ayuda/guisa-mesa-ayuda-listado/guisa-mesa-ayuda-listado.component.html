@@ -1,0 +1,17 @@
+<button type="button" name="button" (click)="irVistaRegistroMesaAyuda()">Agregar trabajador de Mesa de Ayuda</button>
+
+<h1>Trabajadores de Mesa de Ayuda</h1>
+<table>
+    <tr>
+        <th>Trabajador</th>
+        <th>Usuario</th>
+        <th>Estado</th>
+        <th>Editar</th>
+    </tr>
+    <tr *ngFor="let mesaAyuda of mesasAyudaList">
+        <td>{{ mesaAyuda.nomMesaAyuda }} {{ mesaAyuda.apeMesaAyuda }}</td>
+        <td>{{ mesaAyuda.usuario.emailUsuario }}</td>
+        <td>{{ mesaAyuda.estadoMesaAyuda ? 'Activo' : 'Inactivo' }}</td>
+        <td><span (click)="irVistaEdicionMesaAyuda(mesaAyuda)">ir</span></td>
+    </tr>
+</table>

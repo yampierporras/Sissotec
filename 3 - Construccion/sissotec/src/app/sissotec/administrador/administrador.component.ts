@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ClienteService } from '../../services/cliente.service';
 import { AdministradorService } from '../../services/administrador.service';
 
-import Cliente from '../../models/cliente.model';
 import Administrador from '../../models/administrador.model';
 
 import { Observable } from 'rxjs/Rx';

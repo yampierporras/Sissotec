@@ -1,3 +1,10 @@
 <p>
-  guisc-inicio-ticket works!
+  {{ areaConsultada.nomArea }}
 </p>
+<select name="categorias" [(ngModel)]="ticketNuevo.categoria">
+    <option *ngFor="let categoria of categoriasList" [ngValue]="categoria">{{ categoria.nomCategoria }}</option>
+    <!-- <option value="">{{categoriasList.nomCategoria}}</option> -->
+</select>
+<textarea name="name" rows="8" cols="80" placeholder="Detalla tu problema aqui" [(ngModel)]="ticketNuevo.detalleTicket"></textarea>
+<button type="button" name="button" (click)="registrarTicket()">Enviar</button>
+<button type="button" name="button">Cancelar</button>

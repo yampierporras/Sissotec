@@ -1,0 +1,9 @@
+.area-item:hover {
+    background-color: steelblue;
+    color: #fff;
+}
+
+.area-item {
+    cursor: pointer;
+    display: table;
+}

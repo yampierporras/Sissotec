@@ -1,3 +1,14 @@
-<p>
-  mesa-ayuda works!
-</p>
+<header>
+    <h1>GUI SISSOTEC {{ title }}</h1>
+    <p>{{ mesaAyudaAutenticado.nomMesaAyuda }}</p>
+    <img [src]="mesaAyudaAutenticado.usuario.urlImgUsuario" alt="">
+</header>
+<div>
+    <ul>
+        <li><a [routerLink]="['inicio']">Inicio</a></li>
+        <li><a [routerLink]="['tickets']">Tickets</a></li>
+    </ul>
+</div>
+<div class="cuerpo">
+    <router-outlet></router-outlet>
+</div>

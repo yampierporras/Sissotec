@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { EspecialistaService } from '../../services/especialista.service';
+
+import Especialista from '../../models/especialista.model';
 
 @Component({
   selector: 'app-especialista',
@@ -7,9 +12,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EspecialistaComponent implements OnInit {
 
-  constructor() { }
+    title = 'Especialista';
+    especialistaAutenticado: Especialista = new Especialista();
 
-  ngOnInit() {
-  }
+    constructor(private especialistaService:EspecialistaService) {
+        let usuarioString = localStorage.getItem('usuarioAutenticado');
+        let usuarioJson = JSON.parse(usuarioString);
+        this.consultarEspecialista(usuarioJson._id);
+    }
+
+    ngOnInit() {
+    }
+
+    consultarEspecialista(idUsuario: string) {
+        this.especialistaService.getEspecialista(idUsuario)
+            .subscribe(especialista => {
+                this.especialistaAutenticado = especialista;
+            });
+    }
 
 }
